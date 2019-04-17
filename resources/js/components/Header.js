@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 export default withRouter(({ location: { pathname } }) => (
@@ -10,3 +10,4 @@ export default withRouter(({ location: { pathname } }) => (
         </ul>
     </div>
 ));
+import React, { Component } from 'react';

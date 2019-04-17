@@ -5,6 +5,13 @@ export default class Home extends Component {
         return (
             <div>
                 <div>Home</div>
+                <div>Home</div>
+                <div>Home</div>
+                <div>Home</div>
+                <div>Home</div>
+                <div>Home</div>
+                <div>Home</div>
+                <div>Home</div>
             </div>
         );
     }
