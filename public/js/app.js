@@ -68572,8 +68572,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _components_Style_Container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Style/Container */ "./resources/js/components/Style/Container.js");
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    text-align: center;\n    height: 4.5rem;\n    line-height: 4.5rem;\n    span {\n        font-size: 2rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    text-align: center;\n    h1 {\n        font-size: 2rem;\n        font-weight: 900;\n        margin: 2rem;\n    }\n    ul {\n        overflow: hidden;\n        li {\n            a {\n                float: left;\n                width: 20%;\n                display: block;\n                height: 3rem;\n                line-height: 3rem;\n            }\n        }\n    }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -68603,7 +68604,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    display: block;\n    position: absolute;\n    width: 100%;\n    height: 0.4rem;\n    margin: 3px 0;\n    border-radius: 2rem;\n    transition: all 0.5s ease;\n    background-color: black;\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: block;\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    margin: 3px 0;\n    border-radius: 10rem;\n    transition: all 0.5s ease;\n    background-color: black;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -68633,7 +68634,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    position: relative;\n"]);
+  var data = _taggedTemplateLiteral([""]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -68643,6 +68644,7 @@ function _templateObject() {
 }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 
 
 
@@ -68668,7 +68670,7 @@ var Buger = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templ
 });
 var Line = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_templateObject4());
 var MenuBox = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject5(), function (props) {
-  return props.toggle ? '20rem;' : '0';
+  return props.toggle ? '15rem;' : '0';
 });
 var Menu = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].ul(_templateObject6());
 var LogoBox = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject7());
@@ -68693,7 +68695,17 @@ var RenderHeader = function RenderHeader(_ref) {
     to: "/board"
   }, "BOARD")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/board"
-  }, "BOARD")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LogoBox, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "LOGO"))));
+  }, "BOARD")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LogoBox, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "LOGO"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Style_Container__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "#"
+  }, "mENU")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "#"
+  }, "mENU")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "#"
+  }, "mENU")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "#"
+  }, "mENU")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "#"
+  }, "mENU")))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (RenderHeader);

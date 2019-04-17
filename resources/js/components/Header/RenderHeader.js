@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Container from '../../components/Style/Container';
 
-const Wrapper = styled.div`
-    position: relative;
-`;
+const Wrapper = styled.div``;
 
 const BugerBox = styled.div`
     position: absolute;
@@ -42,9 +41,9 @@ const Line = styled.span`
     display: block;
     position: absolute;
     width: 100%;
-    height: 0.4rem;
+    height: 0.2rem;
     margin: 3px 0;
-    border-radius: 2rem;
+    border-radius: 10rem;
     transition: all 0.5s ease;
     background-color: black;
 `;
@@ -57,7 +56,7 @@ const MenuBox = styled.div`
     left: 0;
     top: 0;
     height: 100vh;
-    width: ${props => (props.toggle ? '20rem;' : '0')};
+    width: ${props => (props.toggle ? '15rem;' : '0')};
 `;
 
 const Menu = styled.ul`
@@ -69,10 +68,22 @@ const Menu = styled.ul`
 `;
 const LogoBox = styled.div`
     text-align: center;
-    height: 4.5rem;
-    line-height: 4.5rem;
-    span {
+    h1 {
         font-size: 2rem;
+        font-weight: 900;
+        margin: 2rem;
+    }
+    ul {
+        overflow: hidden;
+        li {
+            a {
+                float: left;
+                width: 20%;
+                display: block;
+                height: 3rem;
+                line-height: 3rem;
+            }
+        }
     }
 `;
 const RenderHeader = ({ handleToggle, toggle }) => {
@@ -107,7 +118,26 @@ const RenderHeader = ({ handleToggle, toggle }) => {
                     </Menu>
                 </MenuBox>
                 <LogoBox>
-                    <span>LOGO</span>
+                    <h1>LOGO</h1>
+                    <Container>
+                        <ul>
+                            <li>
+                                <Link to='#'>mENU</Link>
+                            </li>
+                            <li>
+                                <Link to='#'>mENU</Link>
+                            </li>
+                            <li>
+                                <Link to='#'>mENU</Link>
+                            </li>
+                            <li>
+                                <Link to='#'>mENU</Link>
+                            </li>
+                            <li>
+                                <Link to='#'>mENU</Link>
+                            </li>
+                        </ul>
+                    </Container>
                 </LogoBox>
             </Wrapper>
         </>
