@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
     position: relative;
-    padding-bottom: 4rem;
 `;
 
 const BugerBox = styled.div`
@@ -12,15 +11,6 @@ const BugerBox = styled.div`
     left: 1rem;
     top: 1rem;
     z-index: 999;
-`;
-
-const LogoBox = styled.div`
-    position: absolute;
-    left: 5rem;
-    top: 1.2rem;
-    span {
-        font-size: 2rem;
-    }
 `;
 
 const Buger = styled.div`
@@ -77,7 +67,14 @@ const Menu = styled.ul`
         margin: 5rem 0;
     }
 `;
-
+const LogoBox = styled.div`
+    text-align: center;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    span {
+        font-size: 2rem;
+    }
+`;
 const RenderHeader = ({ handleToggle, toggle }) => {
     return (
         <>
@@ -89,9 +86,7 @@ const RenderHeader = ({ handleToggle, toggle }) => {
                         <Line />
                     </Buger>
                 </BugerBox>
-                <LogoBox>
-                    <span>jONSOKU</span>
-                </LogoBox>
+
                 <MenuBox toggle={toggle}>
                     <Menu>
                         <li>
@@ -111,6 +106,9 @@ const RenderHeader = ({ handleToggle, toggle }) => {
                         </li>
                     </Menu>
                 </MenuBox>
+                <LogoBox>
+                    <span>LOGO</span>
+                </LogoBox>
             </Wrapper>
         </>
     );
