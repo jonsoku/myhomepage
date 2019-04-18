@@ -6,10 +6,10 @@ import GlobalStyle from './Style/GlobalStyles';
 export default class App extends Component {
     render() {
         return (
-            <>
+            <div className='container'>
                 <Router />
                 <GlobalStyle />
-            </>
+            </div>
         );
     }
 }
