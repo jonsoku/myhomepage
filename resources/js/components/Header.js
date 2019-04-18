@@ -6,7 +6,8 @@ export default class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            toggle: false
+            toggle: false,
+            show: false
         };
     }
 
@@ -21,13 +22,37 @@ export default class Header extends Component {
         console.log(this.state.toggle);
     };
 
+    _scroll = () => {
+        const scrollTop = Math.max(document.documentElement.scrollTop, document.body.scrollTop);
+        const scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+        const clientHeight = document.documentElement.clientHeight;
+        {
+            (scrollTop / scrollHeight) * 100 > 5.7
+                ? this.setState({
+                      show: true
+                  })
+                : this.setState({
+                      show: false
+                  });
+        }
+        console.log((scrollTop / scrollHeight) * 100);
+    };
+
+    componentDidMount() {
+        window.addEventListener('scroll', this._scroll, true);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this._scroll, false);
+    }
+
     render() {
         const { handleToggle } = this;
-        const { toggle } = this.state;
+        const { toggle, show } = this.state;
+        console.log(this.state.show);
         return (
             <div>
                 <RenderLogo />
-                <RenderHambuger handleToggle={handleToggle} toggle={toggle} />
+                <RenderHambuger handleToggle={handleToggle} toggle={toggle} show={show} />
                 <RenderHeader />
             </div>
         );

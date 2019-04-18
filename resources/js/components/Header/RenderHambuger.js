@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { RenderSubMenu } from './index';
 
 const Box = styled.div`
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     z-index: 999;
@@ -37,17 +37,22 @@ const Line = styled.span`
     transition: all 0.4s ease;
 `;
 
-const RenderHambuger = ({ handleToggle, toggle }) => {
+const RenderHambuger = ({ handleToggle, toggle, show }) => {
     return (
         <>
-            <Box>
-                <Hambuger onClick={() => handleToggle()} toggle={toggle}>
-                    <Line />
-                    <Line />
-                    <Line />
-                </Hambuger>
-            </Box>
-            <RenderSubMenu toggle={toggle} />
+            {show ? (
+                <Box>
+                    <Hambuger onClick={() => handleToggle()} toggle={toggle}>
+                        <Line />
+                        <Line />
+                        <Line />
+                    </Hambuger>
+                </Box>
+            ) : (
+                ''
+            )}
+
+            {show ? <RenderSubMenu toggle={toggle} /> : ''}
         </>
     );
 };

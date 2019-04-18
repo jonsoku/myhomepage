@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Menu = styled.div`
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     background: pink;
